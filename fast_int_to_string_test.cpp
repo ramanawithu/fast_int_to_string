@@ -76,7 +76,7 @@ TEST(FastUnsignedIntToSlice, PowerOfTwoBoundaries) {
     }
 }
 
-TEST(FastUnsignedIntToSlice, PowerOfTwoTenBoundaries) {
+TEST(FastUnsignedIntToSlice, PowerOfTenBoundaries) {
     uint64_t val = 1;
 
     char buffer1[32];
@@ -99,7 +99,6 @@ TEST(FastUnsignedIntToSlice, PowerOfTwoTenBoundaries) {
 }
 
 void PerformanceTest_1() {
-    // Ensure the dataset fits in few pages of RAM. We are not interested in testing OS overhead.
     const uint64_t test_input = 18446744073709551557UL;
     char buffer_1[32] = {'\0'};
     char buffer_2[32] = {'\0'};
